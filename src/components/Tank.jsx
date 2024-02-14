@@ -9,7 +9,6 @@ function Tank(props) {
 
   useEffect(() => {
     let averageWater = props.totalWater / 4;
-    console.log(averageWater);
     if (props.totalWater === 0) return;
       distributeTimer.current = setInterval(() => {
       setWaterLevel((waterLevel) => {
