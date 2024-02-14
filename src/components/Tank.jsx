@@ -53,9 +53,7 @@ function Tank(props) {
   };
 
   const startTimer = () => {
-    console.log("down" + Date.now());
-
-    timer.current = setInterval(addWater, 1000);
+       timer.current = setInterval(addWater, 1000);
   };
 
   const endTimer = () => {
