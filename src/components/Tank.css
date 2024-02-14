@@ -1,0 +1,27 @@
+.tank{
+    height : 500px;
+    border : 10px solid rgba(128, 128, 128, 0.705);
+    border-radius: 25px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.water-level{
+    background-color: aqua;   
+    border-radius: 10px;
+    width :100%;
+    transition: height 1s ease;
+}
+
+.add,.empty{
+    display: block;
+    width : 100%;
+    margin-bottom : 20px;
+    padding : 20px 10px;
+    font-size:1rem;
+    border-radius : 15px;
+}
+.add:active{
+    background-color: aqua;
+}
