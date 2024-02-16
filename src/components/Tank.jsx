@@ -5,15 +5,15 @@ function Tank(props) {
   const [waterLevel, setWaterLevel] = useState(0);
   let timer = useRef(null);
   let prevLevel = useRef(0);
-  let distributeTimer = useRef(null);
+  let distributeWaterTimer = useRef(null);
 
   useEffect(() => {
     let averageWater = props.totalWater / 4;
     if (props.totalWater === 0) return;
-      distributeTimer.current = setInterval(() => {
+    distributeWaterTimer.current = setInterval(() => {
       setWaterLevel((waterLevel) => {
         if (waterLevel === averageWater) {
-          clearInterval(distributeTimer.current);
+          clearInterval(distributeWaterTimer.current);
           return waterLevel;
         }
         if (waterLevel > averageWater) {
@@ -31,7 +31,7 @@ function Tank(props) {
     }, 1000);
 
     return () => {
-      clearInterval(distributeTimer.current);
+      clearInterval(distributeWaterTimer.current);
     };
   }, [props.totalWater]);
 
